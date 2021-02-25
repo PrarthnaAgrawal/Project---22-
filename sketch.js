@@ -25,13 +25,15 @@ function setup() {
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
 	
-	box1=createSprite(width/2,680,200,20);
-	box1.shapeColor="red";
-	box2=createSprite(width/2+100,650,20,150);
-	box2.shapeColor="red";
-        box3=createSprite(width/2-100,650,20,150);
+	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
+ 	boxleftSprite.shapeColor=color(255,0,0);
 	
-
+	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
+ 	boxBase.shapeColor=color(255,0,0);
+	
+	boxleftSprite=createSprite(boxPosition+200 , boxY, 20,100);
+ 	boxleftSprite.shapeColor=color(255,0,0);
+	
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 
@@ -63,9 +65,9 @@ function draw() {
 
 function keyPressed() {
 if (keyCode === DOWN_ARROW) {
-	
+    Matter.Body.setStatic(packageBody,false);
     
-}
+  }
 }
 
 
