@@ -40,7 +40,10 @@ function setup() {
 
 
 	Engine.run(engine);
-  
+	
+	box1=createSprite(width/2,680,200,20);
+	box2=createSprite(width/2+100,650,20,150)
+        box2=createSprite(width/2-100,650,20,150)
 }
 
 
